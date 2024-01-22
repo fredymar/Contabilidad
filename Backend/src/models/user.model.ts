@@ -1,9 +1,8 @@
 import mongoose, { Schema } from "mongoose"
 
 //schema de la collection
-const user = new Schema({
-    id: {type: String, required: true},
-    name: {type: String, required: true, unique: true},
+const User = new Schema({
+    name: {type: String, required: true},
     lastName: {type: String, required: true},
     email : {type: String, required: true, unique:true},
     username: String,
@@ -15,4 +14,4 @@ const user = new Schema({
     versionKey : false
 })
 
-export default mongoose.model("User", user)
+export default mongoose.model("User", User)
